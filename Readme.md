@@ -20,6 +20,8 @@ _npx is new which comes with npm 5.2+ and it is a node package manager_
 
   This basically downloads and sets up the create react app and start the npm host to host the app on localhost in my case on port 3000
 
+## Basics of what happens in the background and what means what
+
 - <-name->/src folder is where the main thing happens
 
 - Entry point for react app is index.js inside the src folder
