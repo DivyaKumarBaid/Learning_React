@@ -38,4 +38,21 @@ _npx is new which comes with npm 5.2+ and it is a node package manager_
   - react-dom is related to web which is document object model , it looks after the UI
 
   - There are different react libs such as:
+
     - react-native for android
+
+    the index.js file has
+
+    ```JavaScript
+    ReactDOM.render(
+        <React.StrictMode>
+            <App />
+        </React.StrictMode>,
+        document.getElementById('root')
+        );
+    ```
+
+    here ReactDOM lib renders anything thats inside React.StrictMode and strictmode essentially eliminates the ones uptodate react doesnt support
+
+    and where to render it ?
+    By finding something with the elementid 'root'
