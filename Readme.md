@@ -78,3 +78,9 @@ _npx is new which comes with npm 5.2+ and it is a node package manager_
   _test_ -> this runs App.text.js to test if everything on App.js.
 
   _eject_ -> changes babble and webpack config to optimise the code
+
+- App.js contains the react app
+
+  - using import we import files such as css
+
+- In index.js the reactDOM rendors the fucntion as <APP/> in which it searches for the function APP in App.js
