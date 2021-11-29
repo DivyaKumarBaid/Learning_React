@@ -86,3 +86,67 @@ _npx is new which comes with npm 5.2+ and it is a node package manager_
   - using import we import files such as css
 
 - In index.js the reactDOM rendors the fucntion as <APP/> in which it searches for the function APP in App.js
+
+- Component is self contained representation of html , css and js and react renders components
+
+### Using class instead of function
+
+Basically in Create-react-app , the App.js has function App() but react also gives the programer the fexibility of using classes
+
+for example
+
+**Initially**
+
+```JavaScript
+  function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
+```
+
+_but to use classes we need to import {components} from 'react'_
+
+**After Using classes**
+
+```JavaScript
+import React, { Component } from 'react';
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>
+      </div>
+    );
+  }
+}
+```
