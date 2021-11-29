@@ -54,5 +54,27 @@ _npx is new which comes with npm 5.2+ and it is a node package manager_
 
     here ReactDOM lib renders anything thats inside React.StrictMode and strictmode essentially eliminates the ones uptodate react doesnt support
 
-    and where to render it ?
-    By finding something with the elementid 'root'
+    And where to render it ?
+    Inside 'root' , by finding something with the elementid 'root'
+
+    Now where is 'root' element
+    -> this is inside the body as a div in index.html in the public folder
+
+- Inside the package.json in src folder we have a subsection as scripts
+
+  ```JSON
+      "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+      }
+  ```
+
+  _starts_ -> just takes our app and hosts it on local host without optimising it.
+
+  _build_ -> it optimises the code - ready for production view point - making it faster for rendering on internet.
+
+  _test_ -> this runs App.text.js to test if everything on App.js.
+
+  _eject_ -> changes babble and webpack config to optimise the code
