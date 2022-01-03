@@ -2,19 +2,19 @@
 
 ## Declaring Variables
 
-    ```JavaScript
+```JavaScript
     var y = "Java";
     const x = "Script";
     let z = "Notes";
-    ```
+```
 
 ## Arrays
 
 ### Declaring arrays
 
-    ```JavaScript
+```JavaScript
     var arr_1 = ["Johns",1];
-    ```
+```
 
 Arrays has push and pop function as well
 For in the above example
