@@ -150,3 +150,66 @@ class App extends Component {
   }
 }
 ```
+
+We use class in our react app as it gives us access to this.state , state for a component
+
+eg.
+
+```JavaScript
+  class App extends Component{
+    constructor(){
+      super();
+
+      this.state={
+        string:"Hello"
+      };
+    }
+    render(){
+      return(
+        <div className='App'>
+          <p>{this.state.string}</p>
+          <button onClick={()=>this.setState({string:'Hey'})}>
+            change Text
+          </button>
+        </div>
+    }
+  }
+```
+
+- react is smart enough that it only renders that component that is changed by the user i.e it wont re-render any other content that hasnt been changed
+
+```JavaScript
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      mons: [
+        {
+          name: 'pain',
+          id: 'you_shall_know_pain'
+        },
+        {
+          name: 'Itachi',
+          id: 'Mangekeyo_Sharinghan'
+        },
+        {
+          name: 'Madara',
+          id: 'This_world_is_full_of_pain'
+        }
+      ]
+    };
+  }
+  render() {
+    return (
+      <div className='App'>
+        <p>{this.state.mons.map(naming => (
+          <h1 key={naming.id}>{naming.name}</h1>
+        ))}</p>
+      </div>
+    );
+  }
+}
+```
+
+In the above example we have a list of names under the this.state which in rendered in the return statement in render function. Here the JSX does the job as it calls the this.state.mons.map(naimg=>.....) .This is a function of JSX which basically calls this.state for every element present in the this.state.mons i.e. for pain it is called then for itachi it is called etc. the .map function requires another => function as an argument/object and thus we can use that function_name to refer to each and every element of this.state.mons elements
