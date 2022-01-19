@@ -1,3 +1,55 @@
+# For Understanding React
+
+React is a Javascript Library used for creating websites. React is managed by facebook developers and is a declarative framework which means you dont need to say to react what to do step by step.
+React uses JSX to create html elements . JSX being Java Script XML which basically wraps html elements inside itself.
+
+import React from 'react' -> so that you can use JSX (angular brackets)
+
+import ReactDOM from 'react-dom' -> So that you can use reactDOM to render (ReactDOM.render(HTML,document.getElementbyId("ID")))
+
+We use ReactDOM to render as it can convert JSX to html JS html element and can append it to the div given as parameter
+
+### FAQ
+
+Quiz!
+
+1. What is a React component?
+   A function that returns React elements. (UI)
+
+2. What's wrong with this code?
+
+```JavaScript
+function myComponent() {
+    return (
+        <small>I'm tiny text!</small>
+    )
+}
+```
+
+In react we have to have the function name starting with capital letter (Camel Case)
+
+3. What's wrong with this code?
+
+```JavaScript
+function Header() {
+    return (
+        <header>
+            <nav>
+                <img src="./react-logo.png" width="40px" />
+            </nav>
+        </header>
+    )
+}
+
+ReactDOM.render(Header(), document.getElementById("root"))
+```
+
+In order to use the function the right way to call it inside a reactDOM render is using tags just like this
+
+```JavaScript
+ReactDOM.render(<Header />, document.getElementById("root"))
+```
+
 # Getting started with React
 
 - To get started first download and install node from here https://nodejs.org/en/download/

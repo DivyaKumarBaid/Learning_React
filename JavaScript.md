@@ -57,6 +57,12 @@ function console_debug_parameterised(a,b){
 }
 ```
 
+## JS Objects
+
+var obj = {
+"name :
+}
+
 ## Miscellenious
 
 - console.log("Hello_world") -> is used to debug on runtime as it sends this message to the browser
@@ -68,3 +74,5 @@ function console_debug_parameterised(a,b){
   output +=a;
   //This prints hello15
   ```
+
+- Scope of variables , return keywords etc i.e the basics of oops apply here.
