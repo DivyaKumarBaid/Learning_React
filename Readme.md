@@ -139,6 +139,46 @@ _npx is new which comes with npm 5.2+ and it is a node package manager_
 
 - Component is self contained representation of html , css and js and react renders components
 
+# Using Functions to build components
+
+```JavaScript
+  function Myapp(){
+    return(
+      <div>
+        <p>My app</p>
+      </div>
+    )
+  }
+
+ReactDOM.render(<Myapp/>,document.getElementbyId("root"))
+```
+
+# ReUsing and Building Components
+
+Components in react are essentially like small lego pieces which can join together to build a bigger piece.
+To maintain and use components systematically we can create multiple JS files, save them in component folder and export functions and then import them in our index.js
+
+```JavaScript
+import React from "react"
+
+export default function Header(){
+  return(
+    <div></div>
+  )
+}
+```
+
+and then import the above file with its name
+
+```JavaScript
+import React from "react"
+import ReactDOM from "react-dom"
+import Header from "./components/Header"
+
+ReactDOM.render(<Header/>,document.getbyElementId("root"))
+
+```
+
 ### Using class instead of function
 
 Basically in Create-react-app , the App.js has function App() but react also gives the programer the fexibility of using classes
