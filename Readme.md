@@ -11,8 +11,6 @@ We use ReactDOM to render as it can convert JSX to html JS html element and can 
 
 ### FAQ
 
-Quiz!
-
 1. What is a React component?
    A function that returns React elements. (UI)
 
