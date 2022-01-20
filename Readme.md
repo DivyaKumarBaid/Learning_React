@@ -179,6 +179,28 @@ ReactDOM.render(<Header/>,document.getbyElementId("root"))
 
 ```
 
+## Props or Properties in react
+
+To use a component multiple times we call a function with parameters.
+eg
+
+```JavaScript
+export default function MyName(props){
+  return(
+    <h1>My name is {props.name}</h1>
+  )
+}
+```
+
+Here in the above example we are using props as parameter it is bascially a JS object (just like dict in python) that holds key values of parameters we pass to this function.
+_* Whatever is inside the {} is JS *_
+
+```JavaScript
+ReactDOM.render(<Myname name = "Divya Kumar Baid"/>)
+```
+
+And we call the function just like the above with props as custom attributes
+
 ### Using class instead of function
 
 Basically in Create-react-app , the App.js has function App() but react also gives the programer the fexibility of using classes
