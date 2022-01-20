@@ -207,7 +207,10 @@ And we call the function just like the above with props as custom attributes
    Make a component more reusable.
 
 2. How do you pass a prop into a component?
+
+   ```JavaScript
    <MyAwesomeHeader title="???" />
+   ```
 
 3. Can I pass a custom prop (e.g. `blahblahblah={true}`) to a native
    DOM element? (e.g. <div blahblahblah={true}>) Why or why not?
