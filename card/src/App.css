@@ -1,0 +1,134 @@
+body {
+  background-color: rgb(2, 8, 22);
+  margin: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card_body {
+  margin: 35px;
+  display: block;
+  background-color: #23252c;
+  /* border-radius: 15px; */
+}
+
+.card {
+  text-align: center;
+  margin: 0%;
+  display: block;
+  background-color: #1a1b21;
+
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 0;
+  width: 20rem;
+}
+.outer-card {
+  padding: 35px 55px;
+  filter: drop-shadow(12px 8px 6px #0000005e);
+  /* border-radius: 50; */
+}
+.image {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+}
+.card-image {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 0;
+  padding: 0;
+  width: 20rem;
+}
+.card .title h3 {
+  color: white;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  font-size: 22px;
+}
+.card .title h5 {
+  margin: 0;
+  color: rgb(255, 153, 0);
+  padding: 5px;
+}
+.card .title a {
+  text-decoration: none;
+}
+.card .title h6 {
+  margin: 0;
+  color: rgb(8, 230, 238);
+  padding: 5px;
+}
+.card .reach {
+  display: flex;
+  justify-content: center;
+}
+.card button {
+  cursor: pointer;
+  padding: 8px 10px;
+  margin: 0;
+  margin: 10px;
+  margin-top: 15px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+.card button.linkedin {
+  background-color: rgb(5, 99, 207);
+}
+.card button.email img {
+  width: 30%;
+}
+.card button.linkedin img {
+  width: 25%;
+  padding: 0;
+}
+.card button h6 {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+}
+.card button.linkedin h6 {
+  color: white;
+}
+.main-content {
+  margin: 0;
+  text-align: justify;
+  padding: 0px 22px;
+  padding-top: 10px;
+  color: white;
+}
+.main-content h4 {
+  margin: 0;
+  font-size: 20px;
+  padding: 5px 0px;
+}
+.main-content p {
+  padding: 5px 0px;
+  font-size: 12px;
+  margin: 0;
+}
+.footer {
+  margin-top: 25px;
+  background-color: #161619;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-around;
+}
+.footer img {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.footer img:hover {
+  transform: translateY(-10px);
+  transition: all 0.5s;
+}
