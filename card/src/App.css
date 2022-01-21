@@ -1,4 +1,8 @@
+.root {
+  width: 100%;
+}
 body {
+  width: 100%;
   background-color: rgb(2, 8, 22);
   margin: 0%;
   display: flex;

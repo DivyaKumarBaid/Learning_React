@@ -201,6 +201,12 @@ ReactDOM.render(<Myname name = "Divya Kumar Baid"/>)
 
 And we call the function just like the above with props as custom attributes
 
+We can also Destructure the props like
+
+```Javascript
+export default function MyName({name})......
+```
+
 ### FAQ on props
 
 1. What do props help us accomplish?
@@ -231,6 +237,64 @@ And we call the function just like the above with props as custom attributes
 
 5. What data type is `props` when the component receives it?
    An object!
+
+### Using array.map
+
+For every element in an array , array.map calls a function and concatenate the return value as an array
+eg
+
+```JavaScript
+const arr1 = [1,2,3];
+const arr2 = arr1.map((num) => {return (num*num)})
+const arr3 = arr1.map(num => num*num )
+const arr4 = arr1.map(function(num) {return num*num})
+// In all the above array map function returns the same value in arr2 arr3 we are using
+// arrow method and in arr4 we are using generic function
+```
+
+### Using array.map to render components
+
+eg DATA
+
+```JavaScript
+export default [
+  {
+    name:"A",
+    roll:1
+  },
+  {
+    name:"B",
+    roll:2
+  },
+  {
+    name:"C",
+    roll:3
+  }
+]
+```
+
+Example return function
+
+```JavaScript
+export default function Heading({name,roll}){
+  return(
+        <div>
+            <h1>{name}</h1>
+            <h2>{roll}</h2>
+        </div>
+        )
+}
+```
+
+Example react file
+
+```JavaScript
+  import Data from "Data"
+  import Heading from "Heading"
+
+  const arr = Data.map(<Heading name = {Data.name} roll = {Data.roll}/>)
+  RenderDOM.render(arr,document.getElementId("root"));
+```
 
 ### Using class instead of function
 
