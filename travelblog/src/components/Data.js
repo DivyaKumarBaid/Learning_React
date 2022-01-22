@@ -1,4 +1,4 @@
-export default [
+const Data = [
     {
         id: '1',
         title: "Mount Fuji",
@@ -29,3 +29,4 @@ export default [
         imageUrl: "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
     },
 ]
+export default Data;
