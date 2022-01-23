@@ -296,6 +296,16 @@ Example react file
   RenderDOM.render(arr,document.getElementId("root"));
 ```
 
+## State or useState in react
+
+```JavaScript
+import React,{useState} from 'react'
+
+const arr = useState("HI") //This gives arr = {"HI",f()//a func} an array
+//we can also use useState as
+React.useState("HI") //as useState is present in the react lib
+```
+
 ### Using class instead of function
 
 Basically in Create-react-app , the App.js has function App() but react also gives the programer the fexibility of using classes
