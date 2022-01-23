@@ -306,6 +306,40 @@ const arr = useState("HI") //This gives arr = {"HI",f()//a func} an array
 React.useState("HI") //as useState is present in the react lib
 ```
 
+The useState returns two values - the state and a function through which we can change the state
+
+```JavaScript
+  const [value,setValue] = React.useState("Yes")
+  setValue("NO") //this changes the value from yes to no
+```
+
+Creating a counter using useState
+
+```JavaScript
+  export default App(){
+    const [count,setCount] = React.useState(0)
+
+    function increase(){
+      setCount(count+1)
+    }
+
+    function decrease(){
+      setCount(count-1)
+    }
+
+    return(
+        <div className="counter">
+          <button className="counter--minus" onClick = {decrease}>–</button>
+            <div className="counter--count">
+                <h1>{count}</h1>
+            </div>
+          <button className="counter--plus" onClick = {increase}>+</button>
+        </div>
+    )
+
+  }
+```
+
 ### Using class instead of function
 
 Basically in Create-react-app , the App.js has function App() but react also gives the programer the fexibility of using classes
