@@ -320,11 +320,11 @@ Creating a counter using useState
     const [count,setCount] = React.useState(0)
 
     function increase(){
-      setCount(count+1)
+      setCount(function(oldValue){return oldValue+1}) //It is best to use this kind of func
     }
 
     function decrease(){
-      setCount(count-1)
+      setCount(function(oldValue){return oldValue-1}) //to update the old value
     }
 
     return(
