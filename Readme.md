@@ -320,7 +320,7 @@ Creating a counter using useState
     const [count,setCount] = React.useState(0)
 
     function increase(){
-      setCount(function(oldValue){return oldValue+1}) //It is best to use this kind of func
+      setCount(oldValue => oldvalue+1) //It is best to use this kind of func
     }
 
     function decrease(){
@@ -338,6 +338,16 @@ Creating a counter using useState
     )
 
   }
+```
+
+### Updating an array
+
+IN react useState we cannot update the main value directly so we need to create a copy of that instance and then change the state
+
+```JS
+setThingsArray(prevThingsArray => {
+            return [...prevThingsArray, `Thing ${prevThingsArray.length + 1}`]
+        })
 ```
 
 ### Using class instead of function
