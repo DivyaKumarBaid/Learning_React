@@ -373,23 +373,61 @@ function toggleFavorite() {
 ```
 
 ### FAQ
-1. What is "conditional rendering"?
-When we want to only sometimes display something on the page
-based on a condition of some sort
 
+1. What is "conditional rendering"?
+   When we want to only sometimes display something on the page
+   based on a condition of some sort
 
 2. When would you use &&?
-When you want to either display something or NOT display it
-
+   When you want to either display something or NOT display it
 
 3. When would you use a ternary?
-When you need to decide which thing among 2 options to display
-
+   When you need to decide which thing among 2 options to display
 
 4. What if you need to decide between > 2 options on
    what to display?
-Use an `if...else if... else` conditional or a `switch` statement
+   Use an `if...else if... else` conditional or a `switch` statement
 
+## Form Handling
+
+```JS
+import React from "react"
+
+export default function Form() {
+    const [formData, setFormData] = React.useState(
+        {firstName: "", lastName: ""}
+    )
+
+    console.log(formData)
+
+    function handleChange(event) {
+        setFormData(prevFormData => {
+            return {
+                ...prevFormData,
+                [event.target.name]: event.target.value
+            }
+        })
+    }
+
+    return (
+        <form>
+            <input
+                type="text"
+                placeholder="First Name"
+                onChange={handleChange}
+                name="firstName"
+            />
+            <input
+                type="text"
+                placeholder="Last Name"
+                onChange={handleChange}
+                name="lastName"
+            />
+        </form>
+    )
+}
+
+```
 
 ## Using class instead of function
 
