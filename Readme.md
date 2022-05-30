@@ -664,6 +664,23 @@ export default function WindowTracker() {
 
 ```
 
+## useRef
+
+This is a hook in react which is similar to useStaete but it does not re render any component. It stores the value event after a component is re rendered
+
+for example
+```JavaScript
+
+const countingRenders = useRef(0)
+
+useEffect(()=>{
+  countingRenders.current = countingRenders.current +1;
+})
+
+```
+
+the above example has countingRenders as a useRef const and it has a .current value that stores the value in useRef inside brackets (0) zero in this case.
+
 ## Using class instead of function
 
 Basically in Create-react-app , the App.js has function App() but react also gives the programer the fexibility of using classes
