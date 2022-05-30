@@ -1,37 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import React, { Component } from 'react';
+import useForm from './useForm';
 
-class App extends Component {
-  constructor() {
-    super();
+function App() {
 
-    this.state = {
-      mons: [
-        {
-          name: 'pain',
-          id: 'you_shall_know_pain'
-        },
-        {
-          name: 'Itachi',
-          id: 'Mangekeyo_Sharinghan'
-        },
-        {
-          name: 'Madara',
-          id: 'This_world_is_full_of_pain'
-        }
-      ]
-    };
-  }
-  render() {
-    return (
-      <div className='App'>
-        <p>{this.state.mons.map(naming => (
-          <h1 key={naming.id}>{naming.name}</h1>
-        ))}</p>
-      </div>
-    );
-  }
+  const [value, handleChange] = useForm({ email: '', password: '' });
+
+  return (
+    <>
+      <input type="email" name="email" value={value.email} onChange={handleChange} />
+      <input type="password" name="password" value={value.password} onChange={handleChange} />
+    </>
+  );
 }
 
 export default App;
