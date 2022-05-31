@@ -666,7 +666,7 @@ export default function WindowTracker() {
 
 ## useRef
 
-This is a hook in react which is similar to useStaete but it does not re render any component. It stores the value event after a component is re rendered
+This is a hook in react which is similar to useState but it does not re render any component. It stores the value event after a component is re rendered
 
 for example
 ```JavaScript
