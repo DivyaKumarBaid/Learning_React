@@ -710,6 +710,28 @@ React.useMemo(
 )
 ```
 
+## useContext - createContext
+
+Context hook in react is a solution to massive prop drilling to children component
+It can contain the most commonly used functions / variables / objects at global level i.e. anyone as a children of context provider can use its content. Just like inheritance the children can use the functions and variables
+
+example is there in the folder useContentExample 
+
+basic example
+```JSX
+const Theme = React.createContext()
+const ThemeToggle = React.createContext()
+
+const [currTheme,setTheme] = React.useState(false)
+const toggletheme = ()=>{setTheme(prevTheme=>!prevTheme)}
+
+<Theme.Provider value = {currTheme}>
+  <ThemeToggle.Provider value={toggletheme}>
+    <Component>
+  </ThemeToggle.Provider>
+</Theme.Provider>
+```
+
 ## Using class instead of function
 
 Basically in Create-react-app , the App.js has function App() but react also gives the programer the fexibility of using classes

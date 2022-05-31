@@ -2,8 +2,8 @@ import { useThemeToggle, useThemeValue } from "./Theme";
 
 export const Boxwidth = () => { 
     
-    const theme = useThemeValue();
-    const themetoggle = useThemeToggle();
+    const theme = useThemeValue(); // use the providers value of the useThemeValue custom hook 
+    const themetoggle = useThemeToggle(); // use the providers value of the useThemeToggle custom hook
 
     const ThemeStyle = {
         background: theme ? '#333' : '#ccc',
