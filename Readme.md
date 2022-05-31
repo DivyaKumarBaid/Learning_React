@@ -679,7 +679,36 @@ useEffect(()=>{
 
 ```
 
-the above example has countingRenders as a useRef const and it has a .current value that stores the value in useRef inside brackets (0) zero in this case.
+the above example has countingRenders as a useRef const and it has a .current value that stores the value in useRef inside brackets (0) zero in this case. In this case useRef doesnt re-render the components and avoids infinite loops 
+
+Another usecase of useRef is to reference a DOM element such as
+
+```JSX
+const inputref = useRef()
+
+const focus = () =>{
+  inputref.current.focus()
+}
+
+<input ref={inputref} value = {state} onChange={(e)=>setState(e.target.value)}>
+<button onClick = {()=>focus}></button>
+```
+
+## useMemo
+It is a react hook that memorises the last value of a variable/object and oon re render compares if there is any change , if there is then it re assigns it otherwise the old value stays without running any code that is inside the initialisation
+
+example
+```JSX
+const hlowrld = React.useMemo(()=>{return function1},[var1]) //some slow function1
+
+```
+Syntax of useMemo
+```JSX
+React.useMemo(
+  ()=>{} //function
+  ,[] //dependencies array
+)
+```
 
 ## Using class instead of function
 
