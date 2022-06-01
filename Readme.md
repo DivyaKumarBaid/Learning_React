@@ -732,6 +732,24 @@ const toggletheme = ()=>{setTheme(prevTheme=>!prevTheme)}
 </Theme.Provider>
 ```
 
+## useReducer
+
+useReducer in similar to useState but can handle more complex state management
+```JSX
+// actionFunction
+function reduceReducer(state,action){
+  switch (action.type){
+    case "todo_add":
+      return [...state,newTodo(action.payload)]
+    default:
+      return state 
+  }
+}
+
+// const [state,dispatchFunction] = React.useReducer(actionFunction,initialStateValue)
+const [todo,dispatch]= React.useReducer(reduceReducer,[])
+```
+
 ## Using class instead of function
 
 Basically in Create-react-app , the App.js has function App() but react also gives the programer the fexibility of using classes
