@@ -874,3 +874,58 @@ class App extends Component {
 ```
 
 In the above example we have a list of names under the this.state which in rendered in the return statement in render function. Here the JSX does the job as it calls the this.state.mons.map(naimg=>.....) .This is a function of JSX which basically calls this.state for every element present in the this.state.mons i.e. for pain it is called then for itachi it is called etc. the .map function requires another => function as an argument/object and thus we can use that function_name to refer to each and every element of this.state.mons elements
+
+
+# Redux
+Redux is a state management library inspired by flux(another statemanager by facebook).
+This is a centralised store that stores State of ui elements of the app. Redux is based on Functional Programming.
+
+- Log Rocket
+
+Pros: 
+- Predictable state change
+- Centralised State
+- Cache / preserve page state
+- Easy debugging
+
+Cons:
+- Complexity is high
+- Verbose -> Boiler Plate
+
+### Lodash
+```
+npm i lodash 
+```
+
+```JS
+import {compose,pipe} from 'lodash/fp';
+
+// wrapInDiv,tolowercase,trim are three func
+const res = wrapInDiv(toLowerCase(trim(input)));
+
+const transform = pipe(trim,toLowerCase,wrapInDiv)
+
+transform(input);
+
+```
+
+### Currying
+It converts a function that requires n arguments to a function that requires 1 argument
+
+eg-
+```JS
+function add(a,b){
+  return a+b;
+}
+
+function add1(a){
+  return function(b){
+    return a+b;
+  }
+}
+const adding = add1(5);
+adding(1);
+// or
+add1(5)(1);
+
+```
