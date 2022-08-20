@@ -928,4 +928,11 @@ adding(1);
 // or
 add1(5)(1);
 
+const add2 = a=> b => a+b;
+
+```
+
+### Installing Redux
+```bash
+npm i redux
 ```
