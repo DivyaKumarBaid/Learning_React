@@ -167,6 +167,40 @@ actions.orderCake(1)
 actions.restockCake(3)
 ```
 
+### Combine multiple reducers
+since redux will take only one reduceras arguemtn in createStore, we can combine two seperate reducers using combineReducers from redux.combineReducers
+```JS
+    const rootReducer = combineReducer({
+        cake:cakeReducer,
+        iceCream:iceCreamReducer,
+    });
+
+    const store = createStore(rootReducer);
+```
+
+### Middleware
+Middleware is used to extend the redux with custom functionality.
+Provides a thirdParty extension point between dispatching an actions and the moment it reaches the reducer.
+Use middleware for logging,crash reporting, performing async tasks.
+
+eg -> logger for redux
+
+```JS
+import reduxLogger from 'redux-logger';
+const logger = reduxLogger.createLogger();
+const applyMiddleware = redux.applyMiddleware
+const store = redux.createStore(reducer,applyMiddleware(logger));
+const unsubscribe = store.subscribe(()=>{})
+```
+
+### Redux logger
+`npm install redux-logger`
+
+### Async Actions - Redux-thunk
+Using Redux-thunk to define async creators and axios tp fetch data
+
+
+
 ### Redux ToolKit
 Standard way to write redux logic.
 we need
