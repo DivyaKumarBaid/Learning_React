@@ -199,9 +199,15 @@ const unsubscribe = store.subscribe(()=>{})
 ### Async Actions - Redux-thunk
 Using Redux-thunk to define async creators and axios tp fetch data
 
+**Install redux-thunk**
+`npm i redux-thunk`
 
+- Redux thunk is a middle ware that allows an action creator to return a funtion with async tasks such as fetching data
 
 ### Redux ToolKit
-Standard way to write redux logic.
+Standard modern way to write redux logic.
 we need
 - react-redux -> official Redux UI binding Lib for react
+
+### Installing redux-toolkit
+`npm i @reduxjs/toolkit`
