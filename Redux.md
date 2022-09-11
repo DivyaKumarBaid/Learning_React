@@ -211,3 +211,18 @@ we need
 
 ### Installing redux-toolkit
 `npm i @reduxjs/toolkit`
+file str for normal .js file
+```
+-> app
+  -> store
+-> features
+  -> cake
+  -> icecream
+-> index.js
+```
+- app contains the store
+- features contain the different feature to be
+
+Redux-toolkit uses createSlice and underhood it uses immer so we can just operate on state directly.
+
+Example is in folder `reduxTool`
