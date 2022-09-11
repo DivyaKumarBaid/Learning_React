@@ -17,12 +17,13 @@ const cakeSlice = createSlice({
     initialState: initialState,
     reducers: {
         ordered: (state, action) => {
-            state.numofCakes - action.payload;
+            state.numofCakes -= action.payload;
         },
         restock: (state, action) => {
-            state.numofCake + action.payload;
+            state.numofCakes += action.payload;
         }
     }
 });
 
-module.exports = cakeSlice.reducer
+module.exports = cakeSlice.reducer;
+module.exports.cakeActions = cakeSlice.actions

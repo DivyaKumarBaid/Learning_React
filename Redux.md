@@ -226,3 +226,15 @@ file str for normal .js file
 Redux-toolkit uses createSlice and underhood it uses immer so we can just operate on state directly.
 
 Example is in folder `reduxTool`
+
+In normal Redux we use createStore() but in redux-toolkit we use configure store.
+
+Slice in redux tool kit divides the reducers and actions for a particular branch to different slices for example selling cake is a slice and selling icecream is another and we combine both the slices in store.js inside app folder
+
+from the slice js we export Slice.reducer and Slice.actions
+
+for eg 
+```JS
+module.exports = cakeSlice.reducer
+module.exports.cakeActions = cakeSlice.actions
+```
