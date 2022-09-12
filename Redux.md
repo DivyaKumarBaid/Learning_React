@@ -252,3 +252,66 @@ For example we are using logger
 Middleware is initialised in app/store.js
 
 to include middleware in store we add another key inside const store as `middleware:(getDefaultMiddleware) => getDefaultMiddleware().concat('newMiddleware')`
+
+### Extra reducers
+Extra reducers help one slice of reducers to take action when another slice actions are passed.
+For example if we want to apply an offer of buy one cake get one iceCream free we would use extra reducers.
+To include extra reducer we need to include it in the createSlice object
+
+```js
+const iceSlice = createSlice({
+  name:'ice',
+  initialState:initialState,
+  reducers:{
+    ordered:(state,actions)=>state.numofIce-=actions.payload
+  },
+  extraReducers:(builder)=>{
+    builder.addCase(cakeActions.ordered,(state)=>state.numofIce--)
+  }
+})
+```
+
+### Async Thunk in Redux Toolkit
+Redux tool kit allows the use of async functions using thunk. This acts as extra reducers having three kind of actions -> pending, fullfilled, rejected.
+
+eg
+```JS
+const createSlice = require('@reduxjs/toolkit').createSlice;
+const createAsyncThunk = require('@reduxjs/toolkit').createAsyncThunk;
+const axios = require('axios');
+
+const fetchUser = createAsyncThunk('user/fetchUser', ()=>{
+  return axios.get('url')
+  .then((response)=> response.data.map((user)=>user.id))
+})
+
+const initialState= {
+  loading:true,
+  users:[],
+  error:''
+}
+
+const userSlice = createSlice({
+  name:'user',
+  initialState:initialState,
+  extraReducers:(builder)=>{
+    builder.addCase(fetchUser.pending,(state)=>{
+      state.loading=true,
+    }),
+    builder.addCase(fetchUser.fulfilled,(state,action)=>{
+      state.loading=false;
+      state.users=action.payload;
+      state.error='';
+    }),
+    builder.addCase(fetchUser.rejected,(state,action)=>{
+      state.loading=false;
+      state.user=[];
+      state.error=action.error.message;
+    })
+  }
+})
+
+module.exports = userSlice.reducer;
+module.exports.fetchUser = fetchUser;
+
+```
