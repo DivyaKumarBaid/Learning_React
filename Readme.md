@@ -62,10 +62,16 @@ _npx is new which comes with npm 5.2+ and it is a node package manager_
 
 - Commands for getting started
 
+  ### Using npx
   ```bash
   npx create-react-app <-name->
   cd <-name->
   npm start
+  ```
+
+  ### Using vite
+  ```
+  npm create vite@latest <name>
   ```
 
   This basically downloads and sets up the create react app and start the npm host to host the app on localhost in my case on port 3000
