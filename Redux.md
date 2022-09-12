@@ -238,3 +238,17 @@ for eg
 module.exports = cakeSlice.reducer
 module.exports.cakeActions = cakeSlice.actions
 ```
+
+Inside store.js we configureStore using configureStore from redux-toolkit and we pass an object haivg reducer as one key and for middleware we include another key middleware
+
+apps -> store.js -> combines reducers
+features -> slices -> exports reducer and actions
+index.js -> uses store to perform actions to the reducers imported in store
+
+### Middleware in redux toolkit
+For example we are using logger
+`npm i redux-logger`
+
+Middleware is initialised in app/store.js
+
+to include middleware in store we add another key inside const store as `middleware:(getDefaultMiddleware) => getDefaultMiddleware().concat('newMiddleware')`
