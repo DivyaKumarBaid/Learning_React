@@ -315,3 +315,27 @@ module.exports = userSlice.reducer;
 module.exports.fetchUser = fetchUser;
 
 ```
+
+## Setting up redux in react app
+`npm create vite@latest react-redux-toolkit`
+
+This initialises a react app.
+For example refer to react-redux-toolkit folder
+
+### Connecting react app to store
+`npm i react-redux`
+
+This is typically a useContext which provides store to the top of the tree structure of react app
+Inside index.js / main.js import provider from the react redux lib then pass state as prop in it wrapping up the <App/> component
+
+```JS
+import {Provider} from 'react-redux';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <Provider store={store}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>
+)
+```

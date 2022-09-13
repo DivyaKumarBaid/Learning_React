@@ -73,6 +73,7 @@ _npx is new which comes with npm 5.2+ and it is a node package manager_
   ```
   npm create vite@latest <name>
   ```
+  React app created using Vite uses .jsx extension where as npx react app uses .js extension
 
   This basically downloads and sets up the create react app and start the npm host to host the app on localhost in my case on port 3000
 
