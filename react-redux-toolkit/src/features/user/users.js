@@ -6,11 +6,11 @@ const initialState = {
     users: [],
     error: ''
 }
-const url = ''
+const url = 'https://jsonplaceholder.typicode.com/user'
 // three stages of promise is used here pending,fullfilled,rejected
 export const fetchUsers = createAsyncThunk('users/fetchUsers', () => {
     return axios.get(url)
-        .then((response) => response.data.map(user => user.id))
+        .then((response) => response.data)
 })
 
 const userSlice = createSlice({
@@ -23,7 +23,7 @@ const userSlice = createSlice({
         builder.addCase(fetchUsers.fulfilled, (state, action) => {
             state.loading = false;
             state.users = action.payload;
-            error = ''
+            state.error = ''
         })
         builder.addCase(fetchUsers.rejected, (state, action) => {
             state.loading = false;
