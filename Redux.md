@@ -339,3 +339,20 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </Provider>
 )
 ```
+
+To use the state from the redux we need to use useSelector
+```JS
+import {useSelector} from 'react-redux';
+
+const value = useSelector((state)=>{state.reducername.value})
+```
+
+To dispatch an action we need to use useDispatch from react-redux
+```JS
+import {useDispatch} from 'react-redux';
+
+const dispatch = useDispatch();
+function eventHandler(){
+  dispatch(Actions.action_name(actionpayload))
+}
+```
