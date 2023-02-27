@@ -764,3 +764,15 @@ function reduceReducer(state,action){
 // const [state,dispatchFunction] = React.useReducer(actionFunction,initialStateValue)
 const [todo,dispatch]= React.useReducer(reduceReducer,[])
 ```
+
+### More Notes :
+
+React-Router-Dom : ./React-Router.md
+
+More about Hooks : ./Hooks.md
+
+### References :
+
+[React Tutorial: Learn React JS - Free 11-Hour Course](https://scrimba.com/learn/learnreact)
+
+[Web Dev Simplified](https://www.youtube.com/@WebDevSimplified)
