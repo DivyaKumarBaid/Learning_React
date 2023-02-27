@@ -76,3 +76,4 @@ var obj = {
   ```
 
 - Scope of variables , return keywords etc i.e the basics of oops apply here.
+- Learn more about baiscs like datatype conversion, hoisting and how javascript runs async functions even though it runs on a single thread.
