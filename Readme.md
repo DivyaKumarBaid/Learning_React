@@ -253,6 +253,11 @@ export default function MyName({name})......
 5. What data type are `props` when the component receives them?
    An object!
 
+
+### Trying
+Look through Projects in ./starting-projects
+Disclaimer : these projects needs refactoring as these are just made when I started learning and thus isnt optimised. Just look to the ui part and try building them.
+
 ### Using array.map
 
 For every element in an array, array.map calls a function and concatenates the returned values for each element in the array as an array. In simpler terms array.map loops through the entire array and return a new copied array and in the process of doing so allows the user to make some changes according to an element in that newly created array. 
