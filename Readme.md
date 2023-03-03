@@ -1,4 +1,4 @@
-# For Understanding React
+# Understanding React
 
 React is a JavaScript library used for creating websites. It is managed by Facebook developers and is a declarative framework, which means you do not need to tell React what to do step by step. React uses JSX, which is JavaScript XML that wraps HTML elements.
 
