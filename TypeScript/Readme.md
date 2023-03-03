@@ -5,3 +5,24 @@ Provides with static type checking, describes the shape of an object hence provi
 or 
 using vite
 ```npm vite@latest <name>``` and select react / typescript
+
+_typescript have an extension of .tsx or .ts unlike react .js or .jsx_
+
+## Basic Type Declaration
+
+We can use both type and interfaces to declare a type. Basically declaring a type or interface is similar to creating a schema. We need to specify what type our argument is.
+We use *type* when creating an app and *interface* when creating library
+```TSX
+    type IncomingProps = {
+        name : string
+    }
+
+    export default Greet = (props : IncomingProps) => {
+        return (
+            <h1>Welcome {props.name}</h1>
+        )
+    }
+```
+Here we are declaring the incoming props in Greet as `props : <TypeOfProps>`
+and that TypeOfProps is the IncomingProps here which is an object since props drilled to a child is an object data type.
+
