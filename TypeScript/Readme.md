@@ -15,11 +15,26 @@ We use *type* when creating an app and *interface* when creating library
 ```TSX
     type IncomingProps = {
         name : string
+        type:{
+            gender:string,
+            age:number
+        }
+        entity:{
+            race:string,
+            area:string
+        }[]
+        // array of objects
     }
 
     export default Greet = (props : IncomingProps) => {
         return (
-            <h1>Welcome {props.name}</h1>
+            <>
+                <h1>Welcome {props.name}</h1>
+                <h2>Your gender is {props.type.gender}</h2>
+                <h2>Your age is {props.type.age}</h2>
+                <h2>Your entity is {props.entity.map(en=><h1>{en.race + ',' + en.area}</h1>)}</h2>
+
+            </>
         )
     }
 ```
